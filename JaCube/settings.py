@@ -26,7 +26,7 @@ SECRET_KEY = 'o!0%+s8j&4-z&%4!1$t5rh25+q5du&%#^598kdt%&d)_mmvhbu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jacube.herokuapp.com']
 
 
 # Application definition
@@ -129,3 +129,6 @@ STATICFILES_DIRS = [
 # Media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+import django_heroku
+django_heroku.settings(locals())

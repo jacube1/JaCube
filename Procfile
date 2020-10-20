@@ -1,0 +1,1 @@
+web: gunicorn JaCube.wsgi --log-file -
