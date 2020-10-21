@@ -17,6 +17,7 @@ class Product(models.Model):
     description = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
     image = models.CharField(max_length=100)
+    priority = models.CharField(max_length=100, default=0)
 
     def __str__(self):
         return self.name
