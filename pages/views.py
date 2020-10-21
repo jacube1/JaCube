@@ -6,7 +6,7 @@ from .models import Cart, Product, CartProduct
 
 def home(request):
     cart = Cart.objects.get(id=1)
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('priority')
 
     if request.method == "POST":
         product_selected = Product.objects.get(id=request.POST['product_id'])
