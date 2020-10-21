@@ -26,6 +26,7 @@ class Product(models.Model):
 class CartProduct(models.Model):
     product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
     cart = models.ForeignKey(Cart, on_delete=models.DO_NOTHING)
+    amount = models.IntegerField(max_length=100, default=0)
 
     def __str__(self):
-        return self.product.name, self.cart.owner
+        return self.product.name
