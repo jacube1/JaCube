@@ -19,7 +19,9 @@ def home(request):
         cart_product.save()
         cart.products_counter = sum([p.amount for p in cart_products])
         cart.save()
+    price_total = sum([p.amount * p.product.price_integer for p in cart_products])
     context = {
+        'price_total': price_total,
         'cart_products': cart_products,
         'cart': cart,
         'products': products,

@@ -64,7 +64,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{ product.title|safe }}</h5>
                                         <p class="card-text">{{ product.description|safe }}</p>
-                                        <h6>{{ product.price|safe }}</h6>
+                                        <h6>{{ product.price_description|safe }}</h6>
                                         <form method="post">
                                             {% csrf_token %}
                                             <input type="hidden" name="product_id" value="{{ product.id }}">
@@ -81,7 +81,8 @@
                                 {% for p in cart_products %}
 								    <h4>{{ p.product.name }}: {{ p.amount }}</h4>
                                 {% endfor %}
-								<a href="{% url 'cart_submit' %}" class="btn btn-warning btn-md col-12"><b>Kup Teraz !</b></a>
+                                    <h4>Cena: {{ price_total }} zł</h4>
+								<a href="{% url 'cart_submit' %}" class="btn btn-warning btn-md col-12"><b>Kup Teraz!</b></a>
 							</div>
 
 						</div>
