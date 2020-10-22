@@ -20,6 +20,7 @@ def home(request):
         cart.products_counter = sum([p.amount for p in cart_products])
         cart.save()
     price_total = sum([p.amount * p.product.price_float for p in cart_products])
+    price_total = round(price_total, 2)
     context = {
         'price_total': price_total,
         'cart_products': cart_products,
