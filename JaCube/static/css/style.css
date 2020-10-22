@@ -1,0 +1,8 @@
+footer{
+    bottom: 0;
+    position: fixed;
+}
+
+.h100{
+    height: 100vh;
+}

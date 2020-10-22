@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JaCube.iml" filepath="$PROJECT_DIR$/.idea/JaCube.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../portfolioforgit/.idea/djex.iml" filepath="$PROJECT_DIR$/../portfolioforgit/.idea/djex.iml" />
     </modules>
   </component>
 </project>
